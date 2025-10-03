@@ -47,7 +47,7 @@ func movement(_delta):
 	
 	if position.distance_to(target) < 3:
 		current_point += 1
-		if current_point == 1:
+		if current_point == 4:
 			current_point = 0
 
 

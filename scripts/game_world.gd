@@ -7,6 +7,8 @@ class_name GameWorld
 # Test objects for character methods
 @onready var spike = "res://scenes/spike.tscn"
 @onready var health_potion = "res://scenes/health_potion.tscn"
+const DOOR = preload("uid://c8mf4562xlcu8")
+
 
 func _ready():
 	pass

@@ -52,7 +52,7 @@ animations = [{
 
 [node name="slime" type="CharacterBody2D"]
 script = ExtResource("1_4h4y0")
-movepoints = Array[Vector2]([Vector2(-432, -23), Vector2(0, 0)])
+movepoints = Array[Vector2]([Vector2(-432, -23), Vector2(-431, 84), Vector2(-304, 84), Vector2(-308, 178), Vector2(0, 0)])
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 2)

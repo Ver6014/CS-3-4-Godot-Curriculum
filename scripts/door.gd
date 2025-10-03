@@ -1,6 +1,7 @@
 extends AnimatableBody2D
 
 
+
 func set_is_open(is_open: bool) -> void:
 	if is_open:
 		$AnimatedSprite2D.frame = 0

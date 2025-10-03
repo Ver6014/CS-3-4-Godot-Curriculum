@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://6v0rod1wooie"]
+
+[ext_resource type="Texture2D" uid="uid://bwd62n2s4k1j5" path="res://assets/point_light.webp" id="1_6e84v"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(4, -17)
+scale = Vector2(0.27041036, 0.2260517)
+energy = 4.11
+range_z_min = 4096
+range_z_max = 4096
+texture = ExtResource("1_6e84v")
+texture_scale = 6.04
