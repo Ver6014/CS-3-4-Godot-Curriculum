@@ -8,7 +8,7 @@ class_name Player
 @export var maxHealth : int = 10
 @export var health : int = maxHealth
 @export var coins : int = 0
-
+@export var has_key : bool = false
 
 var facing: Vector2 = Vector2.ZERO
 
@@ -17,7 +17,7 @@ func _ready():
 	print("Player is ready!")
 	# TODO: Add detailed character info display (Lesson 1)
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	handle_movement()
 
 func handle_movement():
