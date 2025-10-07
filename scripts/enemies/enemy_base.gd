@@ -1,6 +1,7 @@
 extends npc
 
-
+@export var can_damage: bool = true
+@export var cooldown : int = 10
 @export var COIN = preload("uid://hlj4dyfo1u8l")
 @export var move_speed: float = 70
 @export var dialouge: Array 
@@ -10,7 +11,7 @@ extends npc
 @export var state: String
 @export var movepoints: Array [Vector2] = []
 var current_point = 0
-@export var dammage: int = 1
+@export var damage_amount: int = 1
 var direction
 
 
@@ -26,6 +27,7 @@ func _physics_process(_delta: float) -> void:
 	movement(_delta)
 	move_and_slide()
 	movement(_delta)
+	cooldowncheck()
 
 
 func movement(_delta):
@@ -65,3 +67,21 @@ func _on_detection_radius_body_exited(body: Node2D) -> void:
 	if body.is_in_group("player"):
 			print("player ran away")
 			ishostle = false
+
+
+
+
+func _on_damage_radius_body_entered(body: Node2D) -> void:
+	if body is Player and can_damage:
+		print("Slime hit Player! Dealing " + str(damage_amount) + " damage")
+		
+		if body.has_method("change_health"):
+			if cooldown == 10:
+				body.change_health(damage_amount)
+
+
+func cooldowncheck():
+	cooldown -= 1
+	
+	if cooldown < 1:
+		cooldown = 10
