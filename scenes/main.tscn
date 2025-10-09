@@ -66,6 +66,7 @@ amount = 5
 position = Vector2(-9.5, 26)
 
 [node name="Door" parent="Tilemap/StuffOnTop" instance=ExtResource("7_tipki")]
+unique_name_in_owner = true
 position = Vector2(24, -24)
 
 [node name="Lever" parent="Tilemap/StuffOnTop" instance=ExtResource("8_85g3d")]

@@ -1,6 +1,7 @@
 extends CharacterBody2D
 class_name Player
 
+const AN = preload("uid://bv7upqt7x1fti")
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @export var can_damage: bool = true
@@ -79,7 +80,10 @@ func change_health(_amount):
 
 func die():
 	print("You died!")
+	get_tree().reload_current_scene()
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel"):
 		get_tree().quit(0)
+		
+		

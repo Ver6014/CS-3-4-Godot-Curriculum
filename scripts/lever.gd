@@ -1,8 +1,9 @@
 extends Area2D
 
-@onready var DOOR = preload("res://scenes/door.tscn")
-@onready var door: AnimatableBody2D = $"../Door"
 
+
+
+@onready var door: AnimatableBody2D = %Door
 
 
 func play_animation(reverse: bool = false) -> void:
