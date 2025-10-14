@@ -1,0 +1,72 @@
+[gd_scene load_steps=13 format=3 uid="uid://dg56wk75gijth"]
+
+[ext_resource type="Script" uid="uid://nd6kcgbfvwy3" path="res://scripts/key_1.gd" id="1_a5das"]
+[ext_resource type="Texture2D" uid="uid://dddcdpi2j4qi0" path="res://assets/2D Pixel Dungeon Asset Pack/items and trap_animation/keys/keys_1_1.png" id="2_36i5i"]
+[ext_resource type="Texture2D" uid="uid://b8r8re7g52c8w" path="res://assets/2D Pixel Dungeon Asset Pack/items and trap_animation/keys/keys_1_2.png" id="3_085qo"]
+[ext_resource type="Texture2D" uid="uid://b84a33r2q1lmw" path="res://assets/2D Pixel Dungeon Asset Pack/items and trap_animation/keys/keys_1_3.png" id="4_bobl1"]
+[ext_resource type="Texture2D" uid="uid://dcrsuk64v1n85" path="res://assets/2D Pixel Dungeon Asset Pack/items and trap_animation/keys/keys_1_4.png" id="5_g3ify"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_caqei"]
+radius = 4.9836764
+height = 15.966613
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yjuui"]
+atlas = ExtResource("2_36i5i")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tmxjm"]
+atlas = ExtResource("3_085qo")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tgubu"]
+atlas = ExtResource("4_bobl1")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4778x"]
+atlas = ExtResource("5_g3ify")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sja4x"]
+atlas = ExtResource("2_36i5i")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bxfxv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yjuui")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tmxjm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tgubu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4778x")
+}],
+"loop": true,
+"name": &"on ground",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sja4x")
+}],
+"loop": true,
+"name": &"other",
+"speed": 5.0
+}]
+
+[node name="Key 1" type="Area2D"]
+script = ExtResource("1_a5das")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5865043
+shape = SubResource("CapsuleShape2D_caqei")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_bxfxv")
+animation = &"on ground"
+autoplay = "on ground"
+frame_progress = 0.2412399
