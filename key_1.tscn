@@ -69,4 +69,6 @@ shape = SubResource("CapsuleShape2D_caqei")
 sprite_frames = SubResource("SpriteFrames_bxfxv")
 animation = &"on ground"
 autoplay = "on ground"
-frame_progress = 0.2412399
+frame_progress = 0.513332
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
