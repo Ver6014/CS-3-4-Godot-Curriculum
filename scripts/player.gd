@@ -12,15 +12,14 @@ const AN = preload("uid://bv7upqt7x1fti")
 @export var has_key : bool = false
 @export var inventor : Array = []
 var facing: Vector2 = Vector2.ZERO
-
-
+#runns once
 func _ready():
 	print("Player is ready!")
 	# TODO: Add detailed character info display (Lesson 1)
-
+#runns every frame
 func _physics_process(_delta):
 	handle_movement()
-
+#move
 func handle_movement():
 	# Get input direction from arrow keys
 	var direction = Vector2.ZERO
@@ -54,20 +53,19 @@ func handle_sprite(direction: Vector2) -> void:
 	elif facing.x > 0:
 		animated_sprite.play(prefix + "_side")
 		animated_sprite.flip_h = false
-
+#colect a pick up
 func collect_pickup(_type : String, _amount : int):
 	if _type == "coin":
 		coins += _amount
 		print("Coins: " + str(coins))
 	elif _type == "health_potion":
 		change_health(_amount)
-		
 
 # TODO: Add character methods here (Lesson 2)
 
 # - level_up()
 # - attack()
-
+#health
 func change_health(_amount): 
 	health += _amount
 	if health > maxHealth:
@@ -77,26 +75,26 @@ func change_health(_amount):
 		die()
 		
 	print("Health: " + str(health))
-
+#what to do when charictor dies
 func die():
 	print("You died!")
 	get_tree().reload_current_scene()
-
+#escape
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel"):
 		get_tree().quit(0)
-
+#sclect item from inventory
 func sclect_item():
 	pass
-
+#display inventory
 func display_inventory(item_number):
 	
 
 	for item in inventor:
 		print(item.description)
-
+#add item to inventory
 func add_item():
 	pass
-
+#remove item from inventory
 func remove_item():
 	pass
