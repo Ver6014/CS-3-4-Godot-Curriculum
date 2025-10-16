@@ -2,7 +2,6 @@ extends CharacterBody2D
 class_name Player
 
 const AN = preload("uid://bv7upqt7x1fti")
-
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @export var can_damage: bool = true
 @export var move_speed: float = 200.0
@@ -12,6 +11,7 @@ const AN = preload("uid://bv7upqt7x1fti")
 @export var has_key : bool = false
 @export var inventor : Array = []
 var facing: Vector2 = Vector2.ZERO
+
 #runns once
 func _ready():
 	print("Player is ready!")
@@ -34,7 +34,6 @@ func handle_movement():
 	# Apply movement using Godot's built-in physics
 	velocity = direction * move_speed
 	move_and_slide()
-
 # BAD QUICK CODE MAYBE CHANGE
 func handle_sprite(direction: Vector2) -> void:
 	var prefix: String = "walk"
@@ -60,9 +59,7 @@ func collect_pickup(_type : String, _amount : int):
 		print("Coins: " + str(coins))
 	elif _type == "health_potion":
 		change_health(_amount)
-
 # TODO: Add character methods here (Lesson 2)
-
 # - level_up()
 # - attack()
 #health
