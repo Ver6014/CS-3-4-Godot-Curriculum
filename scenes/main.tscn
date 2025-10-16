@@ -13,16 +13,22 @@
 [ext_resource type="PackedScene" uid="uid://6v0rod1wooie" path="res://scenes/node_2d.tscn" id="10_eb6dy"]
 [ext_resource type="PackedScene" uid="uid://c6gaa4kprawy0" path="res://scenes/enemies/slime.tscn" id="11_ya4ey"]
 
-[sub_resource type="Environment" id="Environment_jyhfs"]
-background_energy_multiplier = 0.1
-ambient_light_source = 1
-reflected_light_source = 1
+[sub_resource type="Environment" id="Environment_eb6dy"]
+background_mode = 3
+background_color = Color(1, 1, 1, 1)
+background_energy_multiplier = 16.0
+background_canvas_max_layer = 12
+ambient_light_source = 2
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_energy = 16.0
+glow_enabled = true
+glow_normalized = true
+glow_intensity = 3.51
+glow_strength = 2.0
+glow_bloom = 0.58
 
 [node name="Main" type="Node2D"]
 script = ExtResource("2_3k9wy")
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_jyhfs")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0.103743605, 0.103743516, 0.103743516, 1)
@@ -101,3 +107,6 @@ position = Vector2(307, 31)
 [node name="slime" parent="." instance=ExtResource("11_ya4ey")]
 position = Vector2(-308, 178)
 move_points = Array[Vector2]([Vector2(-350, -21), Vector2(-520, -300)])
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_eb6dy")

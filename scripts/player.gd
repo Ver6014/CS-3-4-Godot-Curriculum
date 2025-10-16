@@ -10,7 +10,7 @@ const AN = preload("uid://bv7upqt7x1fti")
 @export var health : int = maxHealth
 @export var coins : int = 0
 @export var has_key : bool = false
-
+@export var inventor : Array = []
 var facing: Vector2 = Vector2.ZERO
 
 
@@ -85,5 +85,18 @@ func die():
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel"):
 		get_tree().quit(0)
-		
-		
+
+func sclect_item():
+	pass
+
+func display_inventory(item_number):
+	
+
+	for item in inventor:
+		print(item.description)
+
+func add_item():
+	pass
+
+func remove_item():
+	pass
