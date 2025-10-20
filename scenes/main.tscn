@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://cpcjxr26k8tgw"]
+[gd_scene load_steps=14 format=4 uid="uid://cpcjxr26k8tgw"]
 
 [ext_resource type="PackedScene" uid="uid://cqvpxnx2pwqhk" path="res://scenes/player.tscn" id="1_2j8vx"]
 [ext_resource type="Script" uid="uid://bnk74kv0ariww" path="res://scripts/game_world.gd" id="2_3k9wy"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://5p2ev4o8h7si" path="res://scenes/lever.tscn" id="8_85g3d"]
 [ext_resource type="PackedScene" uid="uid://6v0rod1wooie" path="res://scenes/node_2d.tscn" id="10_eb6dy"]
 [ext_resource type="PackedScene" uid="uid://c6gaa4kprawy0" path="res://scenes/enemies/slime.tscn" id="11_ya4ey"]
+[ext_resource type="PackedScene" uid="uid://dg56wk75gijth" path="res://key_1.tscn" id="13_trceg"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("2_3k9wy")
@@ -111,3 +112,6 @@ position = Vector2(-308, 178)
 move_points = Array[Vector2]([Vector2(-350, -21), Vector2(-520, -300)])
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+
+[node name="Key 1" parent="." instance=ExtResource("13_trceg")]
+position = Vector2(7, 55)

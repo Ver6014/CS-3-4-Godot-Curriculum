@@ -7,8 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://dcrsuk64v1n85" path="res://assets/2D Pixel Dungeon Asset Pack/items and trap_animation/keys/keys_1_4.png" id="5_g3ify"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_caqei"]
-radius = 4.9836764
-height = 15.966613
+radius = 5.983553
+height = 21.997288
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yjuui"]
 atlas = ExtResource("2_36i5i")
@@ -66,6 +66,7 @@ rotation = 1.5865043
 shape = SubResource("CapsuleShape2D_caqei")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(1.5625, 1.34375)
 sprite_frames = SubResource("SpriteFrames_bxfxv")
 animation = &"on ground"
 autoplay = "on ground"
