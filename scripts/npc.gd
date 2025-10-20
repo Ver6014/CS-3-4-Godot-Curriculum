@@ -1,8 +1,6 @@
 extends CharacterBody2D
 class_name npc
-
 @onready var player: = %Player
-
 @export var health : int = 10
 @export var speed : int = 200
 @export var is_hostile : bool = false

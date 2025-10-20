@@ -1,5 +1,4 @@
 extends npc
-
 @export var can_damage: bool = true
 @export var cooldown : int = 10
 @export var COIN = preload("uid://hlj4dyfo1u8l")

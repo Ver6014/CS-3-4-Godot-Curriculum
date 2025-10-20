@@ -1,10 +1,8 @@
 # This next line allows the color of the coin to update without running the game
 # It can mostly be ignored, but it must be the first line of the script
 @tool
-
 extends Area2D
 class_name pickup
-
 @export var color: Color
 @export var amount : int = 1
 @export var type : String = ""

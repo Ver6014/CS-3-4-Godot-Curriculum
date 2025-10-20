@@ -1,5 +1,4 @@
 extends Area2D
-
 @onready var door: AnimatableBody2D = %Door
 
 func play_animation(reverse: bool = false) -> void:
