@@ -23,16 +23,13 @@ func _physics_process(delta: float) -> void:
 	movement(delta)
 	move_and_slide()
 	pass
-	
+
 
 func _on_detection_radius_body_entered(_body: Node2D) -> void:
 	pass # Replace with function body.
 
-
 func _on_detection_radius_body_exited(_body: Node2D) -> void:
 	pass # Replace with function body.
-
-
 
 func movement(_delta):
 	if is_hostile:

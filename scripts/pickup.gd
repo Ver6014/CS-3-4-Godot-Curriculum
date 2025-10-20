@@ -57,6 +57,3 @@ func configure_pickup(_type : String, _label : String) -> bool:
 			return true
 		else: return false
 	else: return false
-		
-			
-			

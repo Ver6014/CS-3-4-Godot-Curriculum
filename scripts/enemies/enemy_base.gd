@@ -15,12 +15,8 @@ var current_point = 0
 var direction
 
 
-
-
 func _ready() -> void:
 	super._ready()
-	
-	
 
 func _physics_process(_delta: float) -> void:
 	super._physics_process(_delta)
@@ -28,7 +24,6 @@ func _physics_process(_delta: float) -> void:
 	move_and_slide()
 	movement(_delta)
 	cooldowncheck()
-
 
 func movement(_delta):
 	var target = movepoints[current_point]
@@ -52,7 +47,6 @@ func movement(_delta):
 		if current_point == 4:
 			current_point = 0
 
-
 func _on_detection_radius_body_entered(body: Node2D) -> void:
 	super._on_detection_radius_body_entered(body)
 	if ishostle == false:
@@ -60,16 +54,11 @@ func _on_detection_radius_body_entered(body: Node2D) -> void:
 			print("NPC saw player")
 			ishostle = true
 
-
-
 func _on_detection_radius_body_exited(body: Node2D) -> void:
 	super._on_detection_radius_body_exited(body)
 	if body.is_in_group("player"):
 			print("player ran away")
 			ishostle = false
-
-
-
 
 func _on_damage_radius_body_entered(body: Node2D) -> void:
 	if body is Player and can_damage:
@@ -78,7 +67,6 @@ func _on_damage_radius_body_entered(body: Node2D) -> void:
 		if body.has_method("change_health"):
 			if cooldown == 10:
 				body.change_health(damage_amount)
-
 
 func cooldowncheck():
 	cooldown -= 1

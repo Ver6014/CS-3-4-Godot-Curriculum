@@ -1,6 +1,5 @@
 extends CharacterBody2D
 class_name Player
-
 const AN = preload("uid://bv7upqt7x1fti")
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @export var can_damage: bool = true
@@ -11,7 +10,6 @@ const AN = preload("uid://bv7upqt7x1fti")
 @export var has_key : bool = false
 @export var inventor : Array = []
 var facing: Vector2 = Vector2.ZERO
-
 #runns once
 func _ready():
 	print("Player is ready!")
@@ -85,8 +83,6 @@ func sclect_item():
 	pass
 #display inventory
 func display_inventory(_item_number):
-	
-
 	for item in inventor:
 		print(item.description)
 #add item to inventory
