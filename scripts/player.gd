@@ -84,7 +84,7 @@ func _input(event: InputEvent) -> void:
 func sclect_item():
 	pass
 #display inventory
-func display_inventory(item_number):
+func display_inventory(_item_number):
 	
 
 	for item in inventor:
