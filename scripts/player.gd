@@ -1,5 +1,6 @@
 extends CharacterBody2D
 class_name Player
+const Araymanager = preload("uid://dts0r56pm0xuq")
 const AN = preload("uid://bv7upqt7x1fti")
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @export var can_damage: bool = true

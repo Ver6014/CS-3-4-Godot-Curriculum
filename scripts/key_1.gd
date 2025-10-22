@@ -1,4 +1,5 @@
-extends Area2D
+@tool
+extends pickup
 class_name Key
 
 func _ready():
