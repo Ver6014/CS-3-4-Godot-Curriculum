@@ -12,3 +12,5 @@ script = ExtResource("1_pohso")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_psafj")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
