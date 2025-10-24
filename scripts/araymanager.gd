@@ -6,8 +6,17 @@ var itempos
 func check_inventor():
 	print(inventor)
 
-func add_item(int, item):
-	inventor.insert(int, item)
+func add_item(item):
+	inventor.append(item)
 
 func remove_item():
 	inventor.remove_at(itempos)
+
+func scelect_item():
+	pass
+
+
+
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	pass # Replace with function body.
