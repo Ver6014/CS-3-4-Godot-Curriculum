@@ -17,3 +17,6 @@ func scelect_item():
 
 func _on_area_2d_area_entered(_area: Area2D) -> void:
 	pass # Replace with function body.
+
+func dump_inventory():
+	pass
