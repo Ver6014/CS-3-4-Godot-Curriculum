@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="EnemyResource" load_steps=3 format=3 uid="uid://xuhrlt2ta1dw"]
+
+[ext_resource type="SpriteFrames" uid="uid://cxd7c5tt8o38t" path="res://resources/animations/vampire_frames.tres" id="1_buh8n"]
+[ext_resource type="Script" uid="uid://bxtjti5hlu2op" path="res://scripts/resources/enemy_resource.gd" id="2_bm6xc"]
+
+[resource]
+script = ExtResource("2_bm6xc")
+enemy_id = "vampire"
+enemy_name = "Vampire"
+animated_frames = ExtResource("1_buh8n")
+sprite_scale = 2.0
+max_health = 75.0
+move_speed = 90.0
+detection_range = 800.0
+xp_value = 25
+unlock_wave = 2
+spawn_weight = 9
+credit_cost = 15

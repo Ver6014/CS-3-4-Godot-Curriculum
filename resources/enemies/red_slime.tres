@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="EnemyResource" load_steps=3 format=3 uid="uid://baul0lhq41ayi"]
+
+[ext_resource type="SpriteFrames" uid="uid://vb5a3rr6m1hr" path="res://resources/animations/red_slime_frames.tres" id="1_3bigx"]
+[ext_resource type="Script" uid="uid://bxtjti5hlu2op" path="res://scripts/resources/enemy_resource.gd" id="2_kq1og"]
+
+[resource]
+script = ExtResource("2_kq1og")
+enemy_id = "red_slime"
+enemy_name = "Red Slime"
+animated_frames = ExtResource("1_3bigx")
+sprite_scale = 2.0
+max_health = 80.0
+move_speed = 50.0
+detection_range = 800.0
+xp_value = 20
+unlock_wave = 2
+spawn_weight = 8
+credit_cost = 11
