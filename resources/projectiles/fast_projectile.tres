@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ProjectileResource" load_steps=3 format=3 uid="uid://ktgf7unnqm"]
+
+[ext_resource type="Script" uid="uid://dmxm5o1dwdxrs" path="res://scripts/resources/projectile_resource.gd" id="1_ibteg"]
+[ext_resource type="Texture2D" uid="uid://hyayr0pb1vuh" path="res://assets/2D Pixel Dungeon Asset Pack/items and trap_animation/arrow/arrow_2.png" id="2_ibteg"]
+
+[resource]
+script = ExtResource("1_ibteg")
+texture = ExtResource("2_ibteg")
+scale = Vector2(0.5, 0.5)
+speed = 700.0
+lifetime = 5.0
+damage = 17.0

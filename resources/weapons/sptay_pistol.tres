@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="ProjectileWeaponResource" load_steps=5 format=3 uid="uid://iuf6k6d5jvgd"]
+
+[ext_resource type="Texture2D" uid="uid://b3l1sq0mb0js2" path="res://assets/2D Pixel Dungeon Asset Pack/interface/arrow_1.png" id="1_5kvo6"]
+[ext_resource type="Texture2D" uid="uid://cqatq7nlwor0e" path="res://assets/point_arrow.png" id="1_nmpmu"]
+[ext_resource type="Resource" uid="uid://ktgf7unnqm" path="res://resources/projectiles/fast_projectile.tres" id="2_nmpmu"]
+[ext_resource type="Script" uid="uid://c6yex7bm6vt2g" path="res://scripts/resources/projectile_weapon_resource.gd" id="3_mll0b"]
+
+[resource]
+script = ExtResource("3_mll0b")
+projectile_config = ExtResource("2_nmpmu")
+projectile_count = 3
+spread_angle = 5.0
+item_id = "spray"
+item_name = "spray Pistol"
+description = "A simple firearm that shoots basic projectiles. Perfect for starting your survival journey."
+icon = ExtResource("1_5kvo6")
+value = 50
+base_damage = 15.0
+fire_rate = 0.2
+accuracy_spread = 5.0
+weapon_sprite = ExtResource("1_nmpmu")
