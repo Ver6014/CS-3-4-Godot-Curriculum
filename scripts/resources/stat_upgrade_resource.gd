@@ -68,7 +68,7 @@ class_name StatUpgradeResource
 ##    - Set amount and description
 ##
 ## STEP 5: Add to player's available_upgrades:
-##    - Open scenes/player.tscn
+##    - Open scenes/levelupui.tscn
 ##    - Find "Available Upgrades" array
 ##    - Add your new upgrade resource
 ##
@@ -77,6 +77,7 @@ class_name StatUpgradeResource
 ## Enum defining available upgrade types
 enum UpgradeType {
 	HEALTH,    ## Increases max health
+	SPEED
 		
 }
 
@@ -110,6 +111,8 @@ func apply_to_player(player: Player) -> bool:
 	match stat_type:
 		UpgradeType.HEALTH:
 			return player.upgrade_health(amount)
+		UpgradeType.SPEED:
+			return player.upgrade_speed(amount)
 		
 		_:
 			push_error("Unknown stat_type: " + str(stat_type))
