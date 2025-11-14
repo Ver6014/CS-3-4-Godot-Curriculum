@@ -8,14 +8,13 @@
 [resource]
 script = ExtResource("3_mll0b")
 projectile_config = ExtResource("2_nmpmu")
-projectile_count = 3
-spread_angle = 5.0
+spread_angle = 6.0
 item_id = "spray"
 item_name = "spray Pistol"
 description = "A simple firearm that shoots basic projectiles. Perfect for starting your survival journey."
 icon = ExtResource("1_5kvo6")
 value = 50
 base_damage = 15.0
-fire_rate = 0.2
+fire_rate = 0.5
 accuracy_spread = 5.0
 weapon_sprite = ExtResource("1_nmpmu")

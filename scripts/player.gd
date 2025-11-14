@@ -43,6 +43,11 @@ class_name Player
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
+
+@onready var WEAPON_SYSTEM: WeaponSystem = $WeaponSystem
+@onready var gun3 = load("res://resources/weapons/sptay_pistol.tres")
+@onready var gun1 = load("res://resources/weapons/basic_pistol.tres")
+@onready var gun2 = load("res://resources/weapons/sptay_pistol.tres")
 # Movement - Controls how fast the player moves
 @export var move_speed: float = 200.0
 
@@ -71,7 +76,12 @@ signal player_died
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel"):
 		get_tree().quit(0)
-
+	if event.is_action_pressed("plus"):
+		WEAPON_SYSTEM.equip_weapon(gun2)
+	if event.is_action_pressed("minus"):
+		WEAPON_SYSTEM.equip_weapon(gun1)
+	if event.is_action_pressed("zero"):
+		WEAPON_SYSTEM.equip_weapon(gun3)
 
 func _ready():
 	current_health = max_health
