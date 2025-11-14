@@ -14,6 +14,6 @@ description = "A simple firearm that shoots basic projectiles. Perfect for start
 icon = ExtResource("1_3ajpr")
 value = 50
 base_damage = 15.0
-fire_rate = 0.08
+fire_rate = 0.06
 accuracy_spread = 5.0
 weapon_sprite = ExtResource("4_8awnp")
