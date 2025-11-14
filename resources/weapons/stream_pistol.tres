@@ -8,8 +8,6 @@
 [resource]
 script = ExtResource("3_bwoms")
 projectile_config = ExtResource("2_20vxb")
-projectile_count = 3
-spread_angle = 6.0
 item_id = "spray"
 item_name = "spray Pistol"
 description = "A simple firearm that shoots basic projectiles. Perfect for starting your survival journey."
