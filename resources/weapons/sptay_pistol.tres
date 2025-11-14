@@ -8,6 +8,7 @@
 [resource]
 script = ExtResource("3_mll0b")
 projectile_config = ExtResource("2_nmpmu")
+projectile_count = 6
 spread_angle = 6.0
 item_id = "spray"
 item_name = "spray Pistol"

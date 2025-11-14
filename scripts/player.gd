@@ -45,7 +45,7 @@ class_name Player
 
 
 @onready var WEAPON_SYSTEM: WeaponSystem = $WeaponSystem
-@onready var gun3 = load("res://resources/weapons/sptay_pistol.tres")
+@onready var gun3 = load("res://resources/weapons/stream_pistol.tres")
 @onready var gun1 = load("res://resources/weapons/basic_pistol.tres")
 @onready var gun2 = load("res://resources/weapons/sptay_pistol.tres")
 # Movement - Controls how fast the player moves

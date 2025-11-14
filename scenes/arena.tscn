@@ -40,5 +40,4 @@ available_enemies = Array[ExtResource("7_ixwup")]([ExtResource("8_a43o1"), ExtRe
 [node name="HUD" parent="." instance=ExtResource("5_hud")]
 
 [node name="LevelUpUI" parent="." instance=ExtResource("6_levelup")]
-visible = false
 available_upgrades = Array[ExtResource("10_k1k1x")]([ExtResource("11_ajq0i"), ExtResource("18_6joey")])
